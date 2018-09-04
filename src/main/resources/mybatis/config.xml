@@ -5,8 +5,8 @@
 
 <configuration>
 	<typeAliases>
-		<typeAlias alias="User" type="com.rainbow.common.beans.User" />
-		<typeAlias alias="Simple" type="com.rainbow.core.data.mybatis.vo.SimpleBean" />
+		<typeAlias alias="User" type="com.rainbow.module.smartclass.bean.UserBean" />
+		<typeAlias alias="UserInfo" type="com.rainbow.core.data.mybatis.vo.SimpleBean" />
 	</typeAliases>
 
 	<environments default="development">
@@ -15,9 +15,9 @@
 			<!-- connecting to Local MySql -->
 			<dataSource type="POOLED">
 				<property name="driver" value="com.mysql.jdbc.Driver" />
-				<property name="url" value="jdbc:mysql://localhost:3306/rainbow"/>
-				<property name="username" value="rainbow" />
-				<property name="password" value="q110110" />
+				<property name="url" value="jdbc:mysql://localhost:3306/sc"/>
+				<property name="username" value="sc" />
+				<property name="password" value="sc" />
 			</dataSource>
 		</environment>
 	</environments>

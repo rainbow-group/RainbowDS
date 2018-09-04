@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="User">
+
+	<resultMap id="result" type="User">
+		<result property="id" column="id" />
+		<result property="openId" column="open_id" />
+		<result property="createdDate" column="created_date" />
+		<result property="phone" column="phone" />
+	</resultMap>
+
+	<select id="selectAll" resultMap="result">
+		SELECT * FROM USER;
+	</select>
+
+	<select id="selectByOpenId" parameterType="String" resultMap="result">
+		SELECT * FROM USER WHERE OPEN_ID = #{openId}
+	</select>
+
+	<insert id="insert" parameterType="User" useGeneratedKeys="true"
+		keyProperty="id">
+		INSERT INTO USER (name) VALUES (#{name});
+	</insert>
+
+	<update id="update" parameterType="User">
+		UPDATE USER
+		SET name = #{name}
+		WHERE id = #{id}
+	</update>
+
+	<delete id="delete" parameterType="int">
+		DELETE from USER WHERE id = #{id}
+	</delete>
+</mapper>
