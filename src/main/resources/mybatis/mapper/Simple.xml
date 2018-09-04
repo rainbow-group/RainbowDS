@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Simple">
+
+	<resultMap id="Item" type="Simple">
+		<result property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="desc" column="desc" />
+		<result property="group" column="group" />
+		<result property="order" column="order" />
+	</resultMap>
+
+	<select id="findModulesByUid" resultMap="Item">
+		SELECT m.* FROM
+		map_user_role ur, map_role_module rm, module m WHERE ur.role_id =
+		rm.role_id AND rm.module_id = m.id and ur.user_id=#{id}
+	</select>
+</mapper>
