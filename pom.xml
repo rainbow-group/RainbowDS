@@ -21,6 +21,7 @@
 		<version.myBatis>3.4.1</version.myBatis>
 		<version.mySql>8.0.12</version.mySql>
 		<version.jedis>2.8.0</version.jedis>
+		<version.javaee>8.0</version.javaee>
 	</properties>
 
 	<dependencies>
@@ -113,6 +114,12 @@
 			<groupId>com.mchange</groupId>
 			<artifactId>c3p0</artifactId>
 			<version>0.9.5.2</version>
+		</dependency>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>${version.javaee}</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 

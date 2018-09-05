@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger;
  * @author Ray
  * 
  */
-@Path("/auth")
+@Path("/sc/auth")
 public class AuthService {
 	final static Logger logger = LogManager.getLogger(AuthService.class);
 

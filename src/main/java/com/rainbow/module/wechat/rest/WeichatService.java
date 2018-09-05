@@ -21,7 +21,7 @@ import com.rainbow.module.wechat.beans.AccessToken;
 @Path("/wechat")
 public class WeichatService {
 	
-	@Path("/")
+	@Path("/in")
 	@POST
 	@Produces(MediaType.APPLICATION_XML)
 	public Response wechat(String xml) {
