@@ -5,10 +5,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.sql.DataSource;
-
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 /**
@@ -19,25 +15,6 @@ public class BaseConnection {
 	
 	private static ComboPooledDataSource ds=new ComboPooledDataSource();
 
-//	protected Connection getConnection() {
-//
-//		Connection conn = null;
-//
-//		try {
-//			Context initialContext = new InitialContext();
-//			DataSource datasource = (DataSource) initialContext.lookup("jdbc:mysql://localhost:3306/sc");
-//
-//			if (datasource != null) {
-//				conn = datasource.getConnection();
-//			} else {
-//			}
-//		} catch (Exception ex) {
-//			ex.printStackTrace();
-//		}
-//
-//		return conn;
-//	}
-	
 	public static Connection getConnection() throws SQLException{
         return ds.getConnection();
     }

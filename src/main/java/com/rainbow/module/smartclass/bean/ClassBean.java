@@ -1,8 +1,8 @@
-package com.rainbow.module.smartclass.vo;
+package com.rainbow.module.smartclass.bean;
 
 import java.util.Date;
 
-public class Class {
+public class ClassBean {
 
 	Integer id;
 	String name;

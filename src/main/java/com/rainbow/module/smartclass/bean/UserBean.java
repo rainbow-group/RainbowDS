@@ -2,6 +2,10 @@ package com.rainbow.module.smartclass.bean;
 
 import java.util.Date;
 
+/**
+ * @author Ray
+ * Rainbow
+ */
 public class UserBean {
 
 	Integer id;
