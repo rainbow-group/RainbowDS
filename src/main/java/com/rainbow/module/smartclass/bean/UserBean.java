@@ -2,15 +2,23 @@ package com.rainbow.module.smartclass.bean;
 
 import java.util.Date;
 
+import com.rainbow.core.annotation.Column;
+
 /**
- * @author Ray
- * Rainbow
+ * @author Ray Rainbow
  */
 public class UserBean {
 
+	@Column(name = "ID")
 	Integer id;
+
+	@Column(name = "PHONE")
 	String phone;
+
+	@Column(name = "CREATED_DATE")
 	Date createdDate;
+
+	@Column(name = "OPEN_ID")
 	String openId;
 
 	public Integer getId() {

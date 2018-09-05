@@ -2,13 +2,32 @@ package com.rainbow.module.smartclass.bean;
 
 import java.util.Date;
 
+import com.rainbow.core.annotation.Column;
+
+/**
+ * @author Ray Rainbow
+ */
 public class ClassBean {
 
+	@Column(name = "id")
 	Integer id;
+
+	@Column(name = "name")
 	String name;
+
+	@Column(name = "desc")
+	String desc;
+
+	@Column(name = "level")
 	Integer level;
+
+	@Column(name = "type")
 	Integer type;
+
+	@Column(name = "created_By")
 	Integer createdBy;
+
+	@Column(name = "created_Date")
 	Date createdDate;
 
 	public Integer getId() {
@@ -25,6 +44,14 @@ public class ClassBean {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getDesc() {
+		return desc;
+	}
+
+	public void setDesc(String desc) {
+		this.desc = desc;
 	}
 
 	public Integer getLevel() {

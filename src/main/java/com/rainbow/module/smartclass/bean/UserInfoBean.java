@@ -1,17 +1,36 @@
 package com.rainbow.module.smartclass.bean;
 
+import com.rainbow.core.annotation.Column;
+
 /**
- * @author Ray same bean as the userInfo from Wechat interface.
+ * @author Ray 
+ * same bean as the userInfo from Wechat interface.
  */
 
 public class UserInfoBean {
+
+	@Column(name = "OPEN_ID")
 	String openId;
+
+	@Column(name = "avatarUrl")
 	String avatarUrl;
+
+	@Column(name = "city")
 	String city;
+
+	@Column(name = "country")
 	String country;
+
+	@Column(name = "gender")
 	Integer gender;
+
+	@Column(name = "language")
 	String language;
+
+	@Column(name = "nickName")
 	String nickName;
+
+	@Column(name = "province")
 	String province;
 
 	public String getOpenId() {
